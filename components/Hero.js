@@ -220,7 +220,7 @@ function FrameTamu({ children }) {
 /* ----------------------------------------------------------------
    HERO COMPONENT UTAMA
 ---------------------------------------------------------------- */
-export default function Hero({ onOpen, guestName = "Nama Tamu Undangan" }) {
+export default function Hero({ onOpen, guestName = "Di Tempat" }) {
   /* Variasi animasi */
   const stagger = (i = 0) => ({
     initial: { opacity: 0, y: 20 },
@@ -256,8 +256,23 @@ export default function Hero({ onOpen, guestName = "Nama Tamu Undangan" }) {
   return (
     <section
       className="relative w-full min-h-screen flex flex-col items-center overflow-hidden"
-      style={{ backgroundColor: "#ffffff" }}
     >
+       {/* ---- Background Foto ---- */}
+  <div className="absolute inset-0 z-0">
+    <Image
+      src="/assets/prewed2.jpeg"  // ← ganti dengan nama file foto kamu
+      alt=""
+      fill
+      className="object-cover"
+      style={{ objectPosition: "72% 50%" }}
+      priority
+    />
+    {/* Overlay gelap/terang biar teks tetap kebaca */}
+    <div
+      className="absolute inset-0"
+      style={{ backgroundColor: "rgba(43, 37, 37, 0.55)" }} // ← putih semi-transparan
+    />
+  </div>
       {/* =======================================================
           2. AREA TENGAH — bunga samping + konten utama
       ======================================================= */}
@@ -276,7 +291,7 @@ export default function Hero({ onOpen, guestName = "Nama Tamu Undangan" }) {
           }}
         >
           <Image
-            src="/assets/bunga_kiriatas.png"
+            src="/assets/bunga_kiriatas3.png"
             alt=""
             fill
             className="object-contain object-top object-left"
@@ -297,7 +312,7 @@ export default function Hero({ onOpen, guestName = "Nama Tamu Undangan" }) {
           }}
         >
           <Image
-            src="/assets/bunga_kiriatas.png"
+            src="/assets/bunga_kiriatas3.png"
             alt=""
             fill
             className="object-contain object-top object-left"
@@ -458,6 +473,7 @@ export default function Hero({ onOpen, guestName = "Nama Tamu Undangan" }) {
 
           {/* FRAME TAMU DEKORATIF */}
           <motion.div {...stagger(4)} className="w-full mb-6">
+          <div className="backdrop-blur-sm bg-white/1 border border-white/2 rounded-xl overflow-hidden p-1">
             <FrameTamu>
               <p
                 style={{
@@ -475,7 +491,7 @@ export default function Hero({ onOpen, guestName = "Nama Tamu Undangan" }) {
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: "clamp(1.15rem, 4.5vw, 1.5rem)",
                   fontWeight: 600,
-                  color: "#2d2d2d",
+                  color: "#E0E0E0",
                   lineHeight: 1.25,
                   marginBottom: "6px",
                 }}
@@ -485,9 +501,10 @@ export default function Hero({ onOpen, guestName = "Nama Tamu Undangan" }) {
               <p
                 style={{ fontSize: "10px", color: "#bbb", fontStyle: "italic" }}
               >
-                We invite you to celebrate our joy.
+                Dengan penuh sukacita, kami mengundang anda untuk hadir dalam momen bahagia kami.
               </p>
             </FrameTamu>
+            </div>
           </motion.div>
 
           {/* TOMBOL BUKA UNDANGAN */}
@@ -513,6 +530,7 @@ export default function Hero({ onOpen, guestName = "Nama Tamu Undangan" }) {
                 cursor: "pointer",
                 position: "relative",
                 overflow: "hidden",
+                borderRadius: "10px",
               }}
             >
               {/* Shimmer effect saat hover */}
@@ -580,7 +598,7 @@ export default function Hero({ onOpen, guestName = "Nama Tamu Undangan" }) {
           style={{ width: "clamp(160px, 48vw, 380px)", height: "100%" }}
         >
           <Image
-            src="/assets/rumahadat.png"
+            src="/assets/rumahadat1.png"
             alt="Rumah Adat Sunda"
             fill
             className="object-contain object-bottom"
