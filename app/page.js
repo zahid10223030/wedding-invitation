@@ -84,7 +84,7 @@ export default function Home() {
           <Gallery />
           
           <footer className="py-12 text-center text-[10px] tracking-[0.3em] text-gray-300 uppercase">
-            Romeo & Juliet © 2026
+            Agnia & Wahid © 2026
           </footer>
         </motion.div>
       )}

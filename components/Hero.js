@@ -291,7 +291,7 @@ export default function Hero({ onOpen, guestName = "Di Tempat" }) {
           }}
         >
           <Image
-            src="/assets/bunga_kiriatas3.png"
+            src="/assets/bunga_kiri_atas_merah.png"
             alt=""
             fill
             className="object-contain object-top object-left"
@@ -312,7 +312,7 @@ export default function Hero({ onOpen, guestName = "Di Tempat" }) {
           }}
         >
           <Image
-            src="/assets/bunga_kiriatas3.png"
+            src="/assets/bunga_kiri_atas_merah.png"
             alt=""
             fill
             className="object-contain object-top object-left"
@@ -435,22 +435,34 @@ export default function Hero({ onOpen, guestName = "Di Tempat" }) {
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(3.5rem, 14vw, 6rem)",
               fontWeight: 400,
-              color: "#E65100",
+              color: "#D4AF37",
             }}
           >
-            <span className="block">Rama</span>
+            <span className="block"
+            style={{
+              fontSize: "0.70em",
+              fontStyle: "italic",
+              color: "#D4AF37",
+              lineHeight: "1.8",
+            }}>Wahid</span>
             <span
               className="block"
               style={{
-                fontSize: "0.42em",
+                fontSize: "0.50em",
                 fontStyle: "italic",
-                color: "rgba(230,81,0,0.45)",
+                color: "#D4AF37",
                 lineHeight: "1.8",
               }}
             >
               &amp;
             </span>
-            <span className="block">Shinta</span>
+            <span className="block"
+            style={{
+              fontSize: "0.70em",
+              fontStyle: "italic",
+              color: "#D4AF37",
+              lineHeight: "1.8",
+            }}>Agnia</span>
           </motion.h1>
 
           {/* DIVIDER
@@ -491,7 +503,7 @@ export default function Hero({ onOpen, guestName = "Di Tempat" }) {
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: "clamp(1.15rem, 4.5vw, 1.5rem)",
                   fontWeight: 600,
-                  color: "#E0E0E0",
+                  color: "#D4AF37",
                   lineHeight: 1.25,
                   marginBottom: "6px",
                 }}
@@ -512,17 +524,17 @@ export default function Hero({ onOpen, guestName = "Di Tempat" }) {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 10px 30px rgba(230,81,0,0.35)",
+                boxShadow: "0 10px 30px rgba(240, 144, 0, 0.88)",
               }}
               whileTap={{ scale: 0.96 }}
               onClick={onOpen}
               className="flex items-center gap-2.5"
               style={{
-                background: "#E65100",
-                color: "#fff",
+                background: "#D4AF37",
+                color: "#261F08",
                 padding: "13px 36px",
                 fontSize: "10px",
-                fontWeight: 500,
+                fontWeight: 750,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
                 fontFamily: "'Jost', sans-serif",
@@ -582,7 +594,7 @@ export default function Hero({ onOpen, guestName = "Di Tempat" }) {
           style={{ width: "clamp(85px, 24vw, 220px)", height: "100%" }}
         >
           <Image
-            src="/assets/bunga_kiribawah.png"
+            src="/assets/bunga_kiri_bawah_merah.png"
             alt=""
             fill
             className="object-contain object-bottom"
@@ -614,7 +626,7 @@ export default function Hero({ onOpen, guestName = "Di Tempat" }) {
           style={{ width: "clamp(85px, 24vw, 220px)", height: "100%" }}
         >
           <Image
-            src="/assets/bunga_kiribawah.png"
+            src="/assets/bunga_kiri_bawah_merah.png"
             alt=""
             fill
             className="object-contain object-bottom"
