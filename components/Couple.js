@@ -1,0 +1,143 @@
+// components/Couple.js
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const mempelai = [
+  {
+    foto: "/assets/prewed9.jpeg",        // ← ganti foto mempelai wanita
+    nama: "Agnia Amalia",
+    peran: "Mempelai Wanita",
+    ayah: "Bapak Usep Jumhur S.I.P",
+    ibu: "Ibu Iis Nursaadah",
+  },
+  {
+    foto: "/assets/prewed10.jpeg",        // ← ganti foto mempelai pria
+    nama: "Wahid Hasyim",
+    peran: "Mempelai Pria",
+    ayah: "Bapak Asep Saepudin",
+    ibu: "Ibu Lilis Rohayani",
+  },
+];
+
+export default function Couple() {
+  return (
+    <section className="py-24 px-6 text-center" style={{ backgroundColor: "#fff" }}>
+
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16"
+      >
+        <p style={{
+          fontSize: "10px",
+          letterSpacing: "0.4em",
+          textTransform: "uppercase",
+          color: "#aaa",
+          fontFamily: "'Jost', sans-serif",
+          marginBottom: "10px",
+        }}>
+          Yang Berbahagia
+        </p>
+        <h2 style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: "clamp(2rem, 8vw, 3rem)",
+          fontWeight: 400,
+          color: "#E65100",
+          fontStyle: "italic",
+        }}>
+          Mempelai
+        </h2>
+        <div className="flex items-center gap-3 max-w-[180px] mx-auto mt-4">
+          <span className="flex-1 h-px" style={{ background: "linear-gradient(to right, transparent, #E65100aa)" }} />
+          <span style={{ color: "#E65100", fontSize: "14px" }}>✦</span>
+          <span className="flex-1 h-px" style={{ background: "linear-gradient(to left, transparent, #E65100aa)" }} />
+        </div>
+      </motion.div>
+
+      {/* Card Mempelai */}
+      <div className="flex flex-col items-center gap-6 max-w-sm mx-auto">
+        {mempelai.map((m, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.2 }}
+            className="w-full"
+          >
+            {/* Foto */}
+            <div
+              className="relative mx-auto mb-6 overflow-hidden"
+              style={{
+                width: "200px",
+                height: "240px",
+                borderRadius: "999px 999px 32px 32px",
+                border: "4px solid #fdf0e8",
+                boxShadow: "0 8px 32px rgba(230,81,0,0.1)",
+              }}
+            >
+              <Image
+                src={m.foto}
+                alt={m.nama}
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+
+            {/* Info */}
+            <p style={{
+              fontSize: "10px",
+              letterSpacing: "0.3em",
+              textTransform: "uppercase",
+              color: "#E65100",
+              fontFamily: "'Jost', sans-serif",
+              marginBottom: "6px",
+              opacity: 0.7,
+            }}>
+              {m.peran}
+            </p>
+            <h3 style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: "clamp(1.5rem, 6vw, 2rem)",
+              fontWeight: 600,
+              color: "#2d2d2d",
+              marginBottom: "10px",
+            }}>
+              {m.nama}
+            </h3>
+            <p style={{
+              fontSize: "13px",
+              color: "#999",
+              lineHeight: 1.8,
+              fontFamily: "'Jost', sans-serif",
+            }}>
+              Putra/Putri dari :<br />
+              {m.ayah}<br />
+              &amp;<br />
+              {m.ibu}
+            </p>
+
+            {/* Divider antar mempelai */}
+            {i === 0 && (
+              <div className="my-10">
+                <p style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: "clamp(2.5rem, 10vw, 4rem)",
+                  color: "#E65100",
+                  opacity: 0.3,
+                  lineHeight: 1,
+                }}>
+                  &amp;
+                </p>
+              </div>
+            )}
+          </motion.div>
+        ))}
+      </div>
+
+    </section>
+  );
+}
