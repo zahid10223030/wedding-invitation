@@ -23,7 +23,7 @@ export default function Guestbook() {
     <section className="py-20 max-w-2xl mx-auto px-6 bg-white">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-serif mb-2">Guestbook</h2>
-        <div className="h-1 w-20 bg-wedding-accent mx-auto rounded-full"></div>
+        <div className="h-1 w-20 bg-[#e65100] mx-auto rounded-full"></div>
       </div>
 
       <div className="space-y-6 min-h-[400px]">
