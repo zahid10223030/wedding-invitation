@@ -9,6 +9,11 @@ const rekening = [
     noRek: "016101020409531",
     atasNama: "Agnia Amalia",
   },
+  {
+    bank: "BSI",
+    noRek: " 7187966258",
+    atasNama: "Wahid Hasyim",
+  },
 
 ];
 
@@ -122,7 +127,7 @@ export default function Envelope() {
           fontStyle: "italic",
           marginBottom: "12px",
         }}>
-          Amplop Digital
+          Hadiah Pernikahan
         </h2>
         <p style={{
           fontSize: "13px",
@@ -228,9 +233,9 @@ export default function Envelope() {
               <KartuRekening item={item} />
             </motion.div>
           ))}
-        </AnimatePresence>
-      </div>
+</AnimatePresence>
 
+      </div>
     </section>
   );
 }
