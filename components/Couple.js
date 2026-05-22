@@ -5,15 +5,15 @@ import Image from "next/image";
 
 const mempelai = [
   {
-    foto: "/assets/prewed9.jpeg",        // ← ganti foto mempelai wanita
+    foto: "/assets/prewed9.jpeg",        
     nama: "Agnia Amalia",
     peran: "Mempelai Wanita",
-    ayah: "Bapak Usep Jumhur S.I.P",
+    ayah: "Bapak Usep Jumhur, S.I.P",
     ibu: "Ibu Iis Nursaadah",
   },
   {
-    foto: "/assets/prewed10.jpeg",        // ← ganti foto mempelai pria
-    nama: "Wahid Hasyim",
+    foto: "/assets/prewed10.jpeg",       
+    nama: "Wahid Hasyim, S.Pd., M. Pd. ",
     peran: "Mempelai Pria",
     ayah: "Bapak Asep Saepudin",
     ibu: "Ibu Lilis Rohayani",
