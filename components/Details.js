@@ -89,8 +89,8 @@ export default function Details() {
             lineHeight: 1.8,
             fontFamily: "'Jost', sans-serif",
           }}>
-            Kediaman Mempelai Wanita<br />
-            Jl. Mawar No. 123, Bandung
+            Pondok Pesantren Al Amin Bongkor<br />
+            Kp Bongkor No.108, Cintarakyat, Kec. Samarang, Kabupaten Garut, Jawa Barat.
           </p>
         </motion.div>
 
@@ -139,8 +139,8 @@ export default function Details() {
             lineHeight: 1.8,
             fontFamily: "'Jost', sans-serif",
           }}>
-            Grand Ballroom Hotel Mulia<br />
-            Bandung, Jawa Barat
+            Pondok Pesantren Al Amin Bongkor<br />
+            Kp Bongkor No.108, Cintarakyat, Kec. Samarang, Kabupaten Garut, Jawa Barat.
           </p>
         </motion.div>
 
