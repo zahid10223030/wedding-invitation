@@ -1,34 +1,38 @@
 // components/RSVPForm.js
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function RSVPForm() {
   const [status, setStatus] = useState("idle");
   const [showSuccess, setShowSuccess] = useState(false);
+  const router = useRouter();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("loading");
-    
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setStatus("loading");
 
-    const res = await fetch("/api/rsvp", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
-    });
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
 
-    if (res.ok) {
-      setStatus("success");
-      setShowSuccess(true);
-      e.target.reset();
-      window.location.reload();
-    } else {
-      setStatus("error");
-    }
-  };
+  const res = await fetch("/api/rsvp", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (res.ok) {
+    setStatus("success");
+    setShowSuccess(true);  // ← popup muncul
+    e.target.reset();
+    window.dispatchEvent(new CustomEvent("rsvp-submitted"));
+  } else {
+    setStatus("error");
+    setErrorMsg("Gagal mengirim. Coba lagi ya.");
+    setTimeout(() => setErrorMsg(""), 4000);
+  }
+};
 
   const labelStyle = {
     fontSize: "10px",
