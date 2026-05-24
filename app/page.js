@@ -56,10 +56,10 @@ export default function Home() {
             boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
           }}
         >
-            <h2 className="text-wedding-accent italic text-2xl font-serif mb-4">
-              Om Swastiastu / Assalamu'alaikum
+            <h2 className="text-wedding-accent italic text-1xl font-serif mb-4">
+            اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
             </h2>
-            <p className="leading-relaxed font-light" style={{ color: "#f1eeea" }}>
+            <p className="leading-relaxed font-serif italic" style={{ color: "#f1eeea" }}>
               Tanpa mengurangi rasa hormat, kami bermaksud mengundang
               Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.
             </p>

@@ -8,13 +8,17 @@ const mempelai = [
     foto: "/assets/prewed9.jpeg",        
     nama: "Agnia Amalia",
     peran: "Mempelai Wanita",
+    gender: "putri",
+    anakKe: "keempat",
     ayah: "Bapak Usep Jumhur, S.I.P",
     ibu: "Ibu Iis Nursaadah",
   },
   {
     foto: "/assets/prewed10.jpeg",       
-    nama: "Wahid Hasyim, S.Pd., M. Pd. ",
+    nama: "Wahid Hasyim, S.Pd., M.Pd. ",
     peran: "Mempelai Pria",
+    gender: "putra",
+    anakKe: "pertama",
     ayah: "Bapak Asep Saepudin",
     ibu: "Ibu Lilis Rohayani",
   },
@@ -95,7 +99,7 @@ export default function Couple() {
               color: "#E65100",
               fontFamily: "'Jost', sans-serif",
               marginBottom: "6px",
-              opacity: 0.7,
+              opacity: 0.9,
             }}>
               {m.peran}
             </p>
@@ -110,11 +114,12 @@ export default function Couple() {
             </h3>
             <p style={{
               fontSize: "13px",
-              color: "#999",
+              color: "#5a3825",
               lineHeight: 1.8,
               fontFamily: "'Jost', sans-serif",
             }}>
-              Putra/Putri dari :<br />
+              {`${m.gender.charAt(0).toUpperCase() + m.gender.slice(1)} ${m.anakKe} dari : `}
+              <br/>
               {m.ayah}<br />
               &amp;<br />
               {m.ibu}
@@ -127,7 +132,7 @@ export default function Couple() {
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: "clamp(2.5rem, 10vw, 4rem)",
                   color: "#E65100",
-                  opacity: 0.3,
+                  opacity: 0.9,
                   lineHeight: 1,
                 }}>
                   &amp;

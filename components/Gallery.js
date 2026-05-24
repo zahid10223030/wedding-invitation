@@ -7,12 +7,12 @@ import Image from "next/image";
 const photos = [
   { src: "/assets/prewed1.jpeg", tall: true },
   { src: "/assets/prewed2.jpeg", tall: false },
-  { src: "/assets/prewed3.jpeg", tall: false },
+  { src: "/assets/prewed13.jpeg", tall: false },
   { src: "/assets/prewed4.jpeg", tall: true },
   { src: "/assets/prewed5.jpeg", tall: false },
   { src: "/assets/prewed6.jpeg", tall: true },
-  { src: "/assets/prewed7.jpeg", tall: true },
-  { src: "/assets/prewed8.jpeg", tall: false },
+  { src: "/assets/prewed11.jpeg", tall: true },
+  { src: "/assets/prewed12.jpeg", tall: false },
 ];
 
 export default function Gallery() {

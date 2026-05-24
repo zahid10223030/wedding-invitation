@@ -43,9 +43,12 @@ export default function Quote() {
         fontStyle: "italic",
       }}
     >
-      "Dan di antara ayat-ayat-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri,
-      supaya kamu merasa nyaman kepadanya, dan dijadikan-Nya di antaramu mawadah dan rahmah.
-      Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir"
+      "Di antara tanda-tanda (kebesaran)-Nya ialah 
+      bahwa Dia menciptakan pasangan-pasangan untukmu dari 
+      (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. 
+      Dia menjadikan di antaramu rasa cinta dan kasih sayang. 
+      Sesungguhnya pada yang demikian itu benar-benar terdapat 
+      tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
     </p>
     <p
       style={{
@@ -88,15 +91,15 @@ export default function Quote() {
       <p
         style={{
           fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "clamp(1rem, 3.8vw, 1.15rem)",
+          fontSize: "clamp(0.9rem, 3.5vw, 2.0rem)",
           fontStyle: "italic",
           color: "#3d2e20",
           lineHeight: 1.7,
         }}
       >
-        "Aku ingin mencintaimu dengan sederhana;<br />
-        dengan kata yang tak sempat diucapkan kayu<br />
-        kepada api yang menjadikannya abu"
+        "Jika cinta membuatmu lebih dekat kepada kebaikan, maka pertahankanlah. 
+        Sebab cinta yang baik tidak menjauhkanmu dari dirimu, 
+        keluargamu, ataupun Tuhanmu."
       </p>
     </div>
 
@@ -107,7 +110,7 @@ export default function Quote() {
         alt="Foto Mempelai"
         fill
         className="object-cover"
-        style={{ objectPosition: "center" }}
+        style={{ objectPosition: "center 60%" }}
       />
     </div>
   </motion.div>
