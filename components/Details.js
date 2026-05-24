@@ -90,7 +90,7 @@ export default function Details() {
             fontFamily: "'Jost', sans-serif",
           }}>
             Pondok Pesantren Al Amin Bongkor<br />
-            Kp Bongkor No.108, Cintarakyat, Kec. Samarang, Kabupaten Garut, Jawa Barat.
+            Kp. Bongkor, Desa Cintarakyat, Kec. Samarang, Kabupaten Garut, Jawa Barat.
           </p>
         </motion.div>
 
@@ -140,7 +140,7 @@ export default function Details() {
             fontFamily: "'Jost', sans-serif",
           }}>
             Pondok Pesantren Al Amin Bongkor<br />
-            Kp Bongkor No.108, Cintarakyat, Kec. Samarang, Kabupaten Garut, Jawa Barat.
+            Kp. Bongkor, Desa Cintarakyat, Kec. Samarang, Kabupaten Garut, Jawa Barat.
           </p>
         </motion.div>
 
