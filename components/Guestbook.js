@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Guestbook() {
@@ -8,16 +8,29 @@ export default function Guestbook() {
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  const fetchComments = useCallback((currentPage) => {
     setLoading(true);
-    fetch(`/api/comments?page=${page}`)
+    fetch(`/api/comments?page=${currentPage}`)
       .then(res => res.json())
       .then(res => {
         setComments(res.data || []);
         setTotalPages(res.totalPages || 1);
         setLoading(false);
       });
-  }, [page]);
+  }, []);
+
+  useEffect(() => {
+    fetchComments(page);
+  }, [page, fetchComments]);
+
+  useEffect(() => {
+    const handler = () => {
+      setPage(1);
+      fetchComments(1);
+    };
+    window.addEventListener("rsvp-submitted", handler);
+    return () => window.removeEventListener("rsvp-submitted", handler);
+  }, [fetchComments]);
 
   return (
     <section className="py-20 max-w-2xl mx-auto px-6 bg-white">
@@ -32,7 +45,7 @@ export default function Guestbook() {
         ) : (
           <AnimatePresence mode="wait">
             {comments.map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={item.id}
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -51,10 +64,9 @@ export default function Guestbook() {
           </AnimatePresence>
         )}
       </div>
-      
-      {/* Pagination Controls */}
+
       <div className="flex items-center justify-between mt-12 pt-6 border-t border-gray-100">
-        <button 
+        <button
           disabled={page === 1}
           onClick={() => setPage(p => p - 1)}
           className="text-sm font-medium text-wedding-accent disabled:text-gray-300 hover:underline"
@@ -62,7 +74,7 @@ export default function Guestbook() {
           ← Sebelumnya
         </button>
         <span className="text-xs text-gray-400">Hal. {page} / {totalPages}</span>
-        <button 
+        <button
           disabled={page === totalPages}
           onClick={() => setPage(p => p + 1)}
           className="text-sm font-medium text-wedding-accent disabled:text-gray-300 hover:underline"
