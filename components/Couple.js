@@ -8,7 +8,7 @@ const mempelai = [
     nama: "Agnia Amalia",
     ig: "@Imaghniya", // Ganti sama username IG asli
     igLink: "https://www.instagram.com/imaghniya_?igsh=dXFhbXFucHBscGg=", // Ganti sama link IG asli
-    peran: "Mempelai Wanita",
+    peran: "Neng Agni",
     gender: "putri",
     anakKe: "keempat",
     ayah: "Bapak Usep Jumhur, S.I.P",
@@ -19,7 +19,7 @@ const mempelai = [
     nama: "Wahid Hasyim, S.Pd., M.Pd. ",
     ig: "@w1hasyim", // Ganti sama username IG asli
     igLink: "https://www.instagram.com/w1hasyim?igsh=YmJqNzc5bW1ibXhp", // Ganti sama link IG asli
-    peran: "Mempelai Pria",
+    peran: "Kang Wahid",
     gender: "putra",
     anakKe: "pertama",
     ayah: "Bapak Asep Saepudin",
