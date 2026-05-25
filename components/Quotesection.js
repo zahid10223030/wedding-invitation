@@ -110,7 +110,7 @@ export default function Quote() {
         alt="Foto Mempelai"
         fill
         className="object-cover"
-        style={{ objectPosition: "center 60%" }}
+        style={{ objectPosition: "center 70%" }}
       />
     </div>
   </motion.div>

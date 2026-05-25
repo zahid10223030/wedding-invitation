@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="bg-white min-h-screen">
       {/* Audio File: Simpan file musik di /public/music.mp3 */}
-      <audio ref={audioRef} src="/RiskItAll.mp3" loop />
+      <audio ref={audioRef} src="/PerahuKertas.mp3" loop />
       
       {!isOpen ? (
         <Hero onOpen={handleOpen} />
@@ -83,9 +83,11 @@ export default function Home() {
           <Guestbook />
           <Gallery />
           
-          <footer className="py-12 text-center text-[10px] tracking-[0.3em] text-gray-300 uppercase">
-            Agnia & Wahid © 2026
+          <footer className="py-12 text-center text-[10px] tracking-[0.3em] text-gray-300">
+            <p className="uppercase">Agnia & Wahid</p>
+            <p>Created by Abzatiracodehouse © 2026</p>
           </footer>
+          
         </motion.div>
       )}
     </main>

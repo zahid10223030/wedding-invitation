@@ -16,7 +16,7 @@ export const metadata = {
   title: "Wedding Wahid & Agnia",
   description: "create by abzatiracodehouse", 
   icons: {
-    icon: "/favicon.png",   // ← taruh file di folder /public
+    icon: "/prewed14.jpeg",   // ← taruh file di folder /public
   },
 };
 

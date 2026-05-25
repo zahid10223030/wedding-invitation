@@ -7,7 +7,7 @@ const mempelai = [
   {
     foto: "/assets/prewed9.jpeg",        
     nama: "Agnia Amalia",
-    peran: "Mempelai Wanita",
+    peran: "Neng Agni",
     gender: "putri",
     anakKe: "keempat",
     ayah: "Bapak Usep Jumhur, S.I.P",
@@ -16,7 +16,7 @@ const mempelai = [
   {
     foto: "/assets/prewed10.jpeg",       
     nama: "Wahid Hasyim, S.Pd., M.Pd. ",
-    peran: "Mempelai Pria",
+    peran: "Kang Wahid",
     gender: "putra",
     anakKe: "pertama",
     ayah: "Bapak Asep Saepudin",
@@ -93,35 +93,44 @@ export default function Couple() {
 
             {/* Info */}
             <p style={{
-              fontSize: "10px",
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
-              color: "#E65100",
-              fontFamily: "'Jost', sans-serif",
-              marginBottom: "6px",
-              opacity: 0.9,
+              fontFamily: "'Tangerine', cursive",
+              // fontStyle: "italic",
+              fontSize: "clamp(2.5rem, 9vw, 2rem)",
+              fontWeight: 800,
+              color: "#2d2d2d",
+              marginBottom: "10px",
+              // fontSize: "10px",
+              // letterSpacing: "0.3em",
+              // textTransform: "uppercase",
+              // color: "#E65100",
+              // fontFamily: "'Jost', sans-serif",
+              // marginBottom: "6px",
+              // opacity: 0.9,
             }}>
               {m.peran}
             </p>
             <h3 style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(1.5rem, 6vw, 2rem)",
-              fontWeight: 600,
-              color: "#2d2d2d",
-              marginBottom: "10px",
+              fontSize: "20px",
+              // letterSpacing: "0.1em",
+              // textTransform: "uppercase",
+              color: "#E65100",
+              fontFamily: "'Playfair Display', serif",
+              marginBottom: "7px",
+              fontStyle: "italic",
+              opacity: 0.9,
             }}>
               {m.nama}
             </h3>
             <p style={{
               fontSize: "13px",
               color: "#5a3825",
-              lineHeight: 1.8,
-              fontFamily: "'Jost', sans-serif",
+              lineHeight: 1.5,
+              fontFamily: "'Playfair Display', serif",
             }}>
-              {`${m.gender.charAt(0).toUpperCase() + m.gender.slice(1)} ${m.anakKe} dari : `}
+              {`${m.gender.charAt(0).toUpperCase() + m.gender.slice(1)} ${m.anakKe} Dari : `}
               <br/>
-              {m.ayah}<br />
-              &amp;<br />
+              {m.ayah}
+              {" "}&amp;{" "}
               {m.ibu}
             </p>
 

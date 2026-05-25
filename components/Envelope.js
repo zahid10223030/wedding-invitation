@@ -33,64 +33,125 @@ function KartuRekening({ item }) {
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       style={{
-        background: "#fff",
-        border: "1px solid rgba(230,81,0,0.15)",
+        background: "linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 40%, #d8d8d8 100%)",
         borderRadius: "20px",
         padding: "24px",
         marginBottom: "12px",
+        position: "relative",
+        overflow: "hidden",
+        boxShadow: "0 8px 32px rgba(0,0,0,0.1)",
+        minHeight: "160px",
       }}
     >
-      <p style={{
-        fontSize: "10px",
-        letterSpacing: "0.3em",
-        textTransform: "uppercase",
-        color: "#E65100",
-        fontFamily: "'Jost', sans-serif",
-        marginBottom: "8px",
-        opacity: 0.7,
-      }}>
-        {item.bank}
-      </p>
-      <p style={{
-        fontFamily: "'Cormorant Garamond', serif",
-        fontSize: "1.6rem",
-        fontWeight: 600,
-        color: "#2d2d2d",
-        letterSpacing: "0.08em",
-        marginBottom: "4px",
-      }}>
-        {item.noRek}
-      </p>
-      <p style={{
-        fontSize: "12px",
-        color: "#aaa",
-        fontFamily: "'Jost', sans-serif",
-        marginBottom: "16px",
-      }}>
-        a.n. {item.atasNama}
-      </p>
+      {/* Motif diagonal kanan */}
+      <div style={{
+        position: "absolute",
+        right: "-20px",
+        top: "0",
+        bottom: "0",
+        width: "180px",
+        background: "rgba(255,255,255,0.25)",
+        transform: "skewX(-15deg)",
+      }} />
+      <div style={{
+        position: "absolute",
+        right: "30px",
+        top: "0",
+        bottom: "0",
+        width: "80px",
+        background: "rgba(255,255,255,0.15)",
+        transform: "skewX(-15deg)",
+      }} />
 
-      <button
-        onClick={handleCopy}
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: "6px",
-          padding: "8px 20px",
-          borderRadius: "999px",
-          border: "1px solid rgba(230,81,0,0.3)",
-          background: copied ? "#E65100" : "transparent",
-          color: copied ? "#fff" : "#E65100",
-          fontSize: "11px",
-          letterSpacing: "0.15em",
-          textTransform: "uppercase",
-          fontFamily: "'Jost', sans-serif",
-          cursor: "pointer",
-          transition: "all 0.3s ease",
-        }}
-      >
-        {copied ? "✓ Tersalin!" : "Salin Nomor"}
-      </button>
+      {/* Baris atas: chip + nama bank */}
+      <div style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        marginBottom: "20px",
+        position: "relative",
+        zIndex: 1,
+      }}>
+        {/* Chip ATM */}
+        <svg width="44" height="34" viewBox="0 0 44 34" fill="none">
+          <rect x="1" y="1" width="42" height="32" rx="5" fill="#d4a843" stroke="#b8902a" strokeWidth="0.5"/>
+          <rect x="8" y="1" width="1.5" height="32" fill="#b8902a" opacity="0.5"/>
+          <rect x="34.5" y="1" width="1.5" height="32" fill="#b8902a" opacity="0.5"/>
+          <rect x="1" y="10" width="42" height="1.5" fill="#b8902a" opacity="0.5"/>
+          <rect x="1" y="22.5" width="42" height="1.5" fill="#b8902a" opacity="0.5"/>
+          <rect x="14" y="8" width="16" height="18" rx="2" fill="#c49a30" stroke="#b8902a" strokeWidth="0.5"/>
+          <line x1="22" y1="8" x2="22" y2="26" stroke="#b8902a" strokeWidth="0.5" opacity="0.7"/>
+          <line x1="14" y1="17" x2="30" y2="17" stroke="#b8902a" strokeWidth="0.5" opacity="0.7"/>
+        </svg>
+
+        {/* Nama Bank */}
+        <p style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: "1.4rem",
+          fontWeight: 600,
+          color: "#3a3a3a",
+        }}>
+          {item.bank}
+        </p>
+      </div>
+
+      {/* Baris bawah: nomor+nama kiri, tombol kanan */}
+      <div style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-end",
+        position: "relative",
+        zIndex: 1,
+      }}>
+        {/* Kiri: nomor & nama */}
+        <div style={{ textAlign: "left" }}>
+          <p style={{
+            fontFamily: "'Jost', sans-serif",
+            fontSize: "1rem",
+            fontWeight: 500,
+            color: "#2d2d2d",
+            letterSpacing: "0.08em",
+            marginBottom: "4px",
+          }}>
+            {item.noRek}
+          </p>
+          <p style={{
+            fontSize: "13px",
+            color: "#555",
+            fontFamily: "'Jost', sans-serif",
+          }}>
+            {item.atasNama}
+          </p>
+        </div>
+
+        {/* Kanan bawah: tombol copy */}
+        
+        <button
+          onClick={handleCopy}
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "6px",
+            padding: "8px 16px",
+            borderRadius: "999px",
+            border: "none",
+            background: copied ? "#555" : "#3a3a3a",
+            color: "#fff",
+            fontSize: "12px",
+            letterSpacing: "0.05em",
+            fontFamily: "'Jost', sans-serif",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            whiteSpace: "nowrap",
+          }}
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <rect x="9" y="9" width="13" height="13" rx="2"/>
+            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+          </svg>
+          {copied ? "Tersalin!" : "Copy"}
+        </button>
+      </div>
     </motion.div>
   );
 }
