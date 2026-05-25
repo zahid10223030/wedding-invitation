@@ -1,4 +1,3 @@
-// components/Details.js
 "use client";
 import { motion } from "framer-motion";
 
@@ -168,9 +167,17 @@ export default function Details() {
           allowFullScreen
           loading="lazy"
         />
-        <button
+        
+        {/* Tombol dengan Animasi Framer Motion */}
+        <motion.button
           onClick={() => window.open("https://www.google.com/maps/place/7%C2%B013'00.1%22S+107%C2%B051'26.3%22E/@-7.2166896,107.8547325,17z", "_blank")}
-          className="flex items-center justify-center gap-2 py-4 w-full hover:bg-orange-50 transition-colors"
+          whileHover={{ 
+            backgroundColor: "#E65100", 
+            color: "#ffffff" 
+          }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
+          className="flex items-center justify-center gap-2 py-4 w-full"
           style={{
             background: "#fff",
             borderTop: "1px solid rgba(230,81,0,0.1)",
@@ -183,12 +190,13 @@ export default function Details() {
             cursor: "pointer",
           }}
         >
+          {/* Icon currentColor biar otomatis ikut warna teks pas di-hover */}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
             <circle cx="12" cy="10" r="3"/>
           </svg>
           Buka di Google Maps
-        </button>
+        </motion.button>
       </motion.div>
 
     </section>
