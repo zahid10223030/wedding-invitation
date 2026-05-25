@@ -340,60 +340,7 @@ export default function Details() {
 
       </div>
 
-      {/* Google Maps */}
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="max-w-4xl mx-auto"
-        style={{
-          borderRadius: "24px",
-          overflow: "hidden",
-          border: "1px solid rgba(230,81,0,0.12)",
-          boxShadow: "0 4px 24px rgba(230,81,0,0.06)",
-        }}
-      >
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3958.2115825303754!2d107.8547324749993!3d-7.2166895927891135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMTMnMDAuMSJTIDEwN8KwNTEnMjYuMyJF!5e0!3m2!1sen!2sid!4v1778753442174!5m2!1sen!2sid"
-          width="100%"
-          height="320"
-          style={{ border: 0, display: "block" }}
-          allowFullScreen
-          loading="lazy"
-        />
-        
-        {/* Tombol dengan Animasi Framer Motion */}
-        <motion.button
-          onClick={() => window.open("https://www.google.com/maps/place/7%C2%B013'00.1%22S+107%C2%B051'26.3%22E/@-7.2166896,107.8547325,17z", "_blank")}
-          whileHover={{ 
-            backgroundColor: "#E65100", 
-            color: "#ffffff" 
-          }}
-          whileTap={{ scale: 0.98 }}
-          transition={{ duration: 0.2, ease: "easeInOut" }}
-          className="flex items-center justify-center gap-2 py-4 w-full"
-          style={{
-            background: "#fff",
-            borderTop: "1px solid rgba(230,81,0,0.1)",
-            color: "#E65100",
-            fontSize: "11px",
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
-            fontFamily: "'Jost', sans-serif",
-            fontWeight: 500,
-            cursor: "pointer",
-          }}
-        >
-          {/* Icon currentColor biar otomatis ikut warna teks pas di-hover */}
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-          Buka di Google Maps
-        </motion.button>
-      </motion.div>
-
+     
     </section>
   );
 }

@@ -26,7 +26,7 @@ const phases = [
     tanggal: "2026",
     cerita:
       "Tahun 2026 menjadi saksi dari keberanian yang lahir setelah panjangnya penantian dan doa-doa yang tak pernah lelah dipanjatkan. Dengan penuh keyakinan, dia datang membawa kesungguhan, mempertemukan dua keluarga besar dalam satu ruang yang dipenuhi harap dan restu. Hari itu bukan sekadar tentang dua insan yang saling mencintai, melainkan tentang dua hati yang dipersatukan oleh takdir, dua keluarga yang saling menerima, serta dua doa yang sejak lama diam-diam mengetuk langit hingga akhirnya Allah mempertemukannya dalam satu tujuan yang sama.",
-    foto: "/assets/pertunangan.jpeg",
+    foto: "/assets/Pertunangan.jpeg",
   },
   {
     fase: "04",
