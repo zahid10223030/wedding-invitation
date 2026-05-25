@@ -10,6 +10,7 @@ import Quote from "@/components/Quotesection";
 import Gallery from "@/components/Gallery";
 import Couple from "@/components/Couple";
 import Envelope from "@/components/Envelope";
+import LoveStory from "@/components/LoveStory";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,6 +78,7 @@ export default function Home() {
 
           <Quote />
           <Couple />
+          <LoveStory />
           <Details />
           <Envelope />
           <RSVPForm />
