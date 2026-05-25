@@ -1,4 +1,3 @@
-// components/Couple.js
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -7,6 +6,8 @@ const mempelai = [
   {
     foto: "/assets/prewed9.jpeg",        
     nama: "Agnia Amalia",
+    ig: "@Imaghniya", // Ganti sama username IG asli
+    igLink: "https://www.instagram.com/imaghniya_?igsh=dXFhbXFucHBscGg=", // Ganti sama link IG asli
     peran: "Mempelai Wanita",
     gender: "putri",
     anakKe: "keempat",
@@ -16,6 +17,8 @@ const mempelai = [
   {
     foto: "/assets/prewed10.jpeg",       
     nama: "Wahid Hasyim, S.Pd., M.Pd. ",
+    ig: "@w1hasyim", // Ganti sama username IG asli
+    igLink: "https://www.instagram.com/w1hasyim?igsh=YmJqNzc5bW1ibXhp", // Ganti sama link IG asli
     peran: "Mempelai Pria",
     gender: "putra",
     anakKe: "pertama",
@@ -108,10 +111,36 @@ export default function Couple() {
               fontSize: "clamp(1.5rem, 6vw, 2rem)",
               fontWeight: 600,
               color: "#2d2d2d",
-              marginBottom: "10px",
+              marginBottom: "4px", // Diperkecil biar IG nya deketan sama nama
             }}>
               {m.nama}
             </h3>
+
+            {/* Tambahan Instagram */}
+            {m.ig && (
+              <a 
+                href={m.igLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1.5 mx-auto mb-5 hover:opacity-70 transition-opacity"
+                style={{
+                  fontSize: "12px",
+                  color: "#aaa", // Warna soft biar ga nabrak sama nama
+                  fontFamily: "'Jost', sans-serif",
+                  letterSpacing: "0.05em",
+                  textDecoration: "none",
+                }}
+              >
+                {/* Icon IG SVG Simple */}
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                {m.ig}
+              </a>
+            )}
+
             <p style={{
               fontSize: "13px",
               color: "#5a3825",
