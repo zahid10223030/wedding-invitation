@@ -96,13 +96,19 @@ export default function Couple() {
 
             {/* Info */}
             <p style={{
-              fontSize: "10px",
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
-              color: "#E65100",
-              fontFamily: "'Jost', sans-serif",
-              marginBottom: "6px",
-              opacity: 0.9,
+              fontFamily: "'Tangerine', cursive",
+              // fontStyle: "italic",
+              fontSize: "clamp(2.5rem, 9vw, 2rem)",
+              fontWeight: 800,
+              color: "#2d2d2d",
+              marginBottom: "10px",
+              // fontSize: "10px",
+              // letterSpacing: "0.3em",
+              // textTransform: "uppercase",
+              // color: "#E65100",
+              // fontFamily: "'Jost', sans-serif",
+              // marginBottom: "6px",
+              // opacity: 0.9,
             }}>
               {m.peran}
             </p>
@@ -144,13 +150,13 @@ export default function Couple() {
             <p style={{
               fontSize: "13px",
               color: "#5a3825",
-              lineHeight: 1.8,
-              fontFamily: "'Jost', sans-serif",
+              lineHeight: 1.5,
+              fontFamily: "'Playfair Display', serif",
             }}>
-              {`${m.gender.charAt(0).toUpperCase() + m.gender.slice(1)} ${m.anakKe} dari : `}
+              {`${m.gender.charAt(0).toUpperCase() + m.gender.slice(1)} ${m.anakKe} Dari : `}
               <br/>
-              {m.ayah}<br />
-              &amp;<br />
+              {m.ayah}
+              {" "}&amp;{" "}
               {m.ibu}
             </p>
 
