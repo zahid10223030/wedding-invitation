@@ -106,11 +106,11 @@ export default function Quote() {
     {/* Foto mempelai */}
     <div className="relative w-full" style={{ height: "clamp(220px, 60vw, 320px)" }}>
       <Image
-        src="/assets/prewed11.jpeg" 
+        src="/assets/prewed3.jpeg" 
         alt="Foto Mempelai"
         fill
         className="object-cover"
-        style={{ objectPosition: "center 90%" }}
+        style={{ objectPosition: "center 70%" }}
       />
     </div>
   </motion.div>
