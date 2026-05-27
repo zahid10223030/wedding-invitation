@@ -10,8 +10,8 @@ const rekening = [
     atasNama: "Agnia Amalia",
   },
   {
-    bank: "BSI",
-    noRek: " 7187966258",
+    bank: "BRI",
+    noRek: "437101007492502",
     atasNama: "Wahid Hasyim",
   },
 
@@ -191,9 +191,9 @@ export default function Envelope() {
           Hadiah Pernikahan
         </h2>
         <p style={{
-          fontSize: "13px",
+          fontSize: "15px",
           color: "#bbb",
-          fontFamily: "'Jost', sans-serif",
+          fontFamily: "'Playfair Display', serif",
           maxWidth: "280px",
           margin: "0 auto",
           lineHeight: 1.8,

@@ -23,9 +23,9 @@ const phases = [
   {
     fase: "03",
     judul: "Pertunangan",
-    tanggal: "2026",
+    tanggal: "24 Januari 2026",
     cerita:
-      "Tahun 2026 menjadi saksi dari keberanian yang lahir setelah panjangnya penantian dan doa-doa yang tak pernah lelah dipanjatkan. Dengan penuh keyakinan, dia datang membawa kesungguhan, mempertemukan dua keluarga besar dalam satu ruang yang dipenuhi harap dan restu. Hari itu bukan sekadar tentang dua insan yang saling mencintai, melainkan tentang dua hati yang dipersatukan oleh takdir, dua keluarga yang saling menerima, serta dua doa yang sejak lama diam-diam mengetuk langit hingga akhirnya Allah mempertemukannya dalam satu tujuan yang sama.",
+      "Tahun 2026 menjadi saksi dari keberanian yang lahir setelah panjangnya penantian dan doa-doa yang tak pernah lelah dipanjatkan. Dengan penuh keyakinan, dia datang membawa kesungguhan, mempertemukan dua keluarga besar dalam satu ruang yang dipenuhi harap dan restu. Hari itu bukan sekadar tentang dua insan yang saling mencintai, melainkan tentang dua hati yang dipersatukan oleh takdir, dua keluarga yang saling menerima, serta dua doa yang sejak lama diam-diam mengetuk langit hingga akhirnya Allah mempertemukan kita dalam satu tujuan yang sama.",
     foto: "/assets/Pertunangan.jpeg",
   },
   {
@@ -113,9 +113,9 @@ function PhaseCard({ item, index }) {
       {/* Isi Cerita Rata Tengah */}
       <p
         style={{
-          fontSize: "clamp(12px, 3vw, 15px)",
-          color: "#5a5a5a",
-          fontFamily: "'Jost', sans-serif",
+          fontSize: "18px",
+          color: "#1F1F1F",
+          fontFamily: "'Playfair Display', serif",
           lineHeight: 2,
           textAlign: "center",
           padding: "0 10px",

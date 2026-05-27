@@ -10,7 +10,9 @@ const mempelai = [
     igLink: "https://www.instagram.com/imaghniya_?igsh=dXFhbXFucHBscGg=", // Ganti sama link IG asli
     peran: "Neng Agni",
     gender: "putri",
-    anakKe: "keempat",
+    zoom: "1",           // ← normal, ga di-zoom
+    fotoPosition: "center top",
+    anakKe: "ke-empat",
     ayah: "Bapak Usep Jumhur, S.I.P",
     ibu: "Ibu Iis Nursaadah",
   },
@@ -21,6 +23,8 @@ const mempelai = [
     igLink: "https://www.instagram.com/w1hasyim?igsh=YmJqNzc5bW1ibXhp", // Ganti sama link IG asli
     peran: "Kang Wahid",
     gender: "putra",
+    zoom: "1.5",         // ← khusus Kang Wahid di-zoom
+    fotoPosition: "70% 15%",
     anakKe: "pertama",
     ayah: "Bapak Asep Saepudin",
     ibu: "Ibu Lilis Rohayani",
@@ -90,7 +94,12 @@ export default function Couple() {
                 src={m.foto}
                 alt={m.nama}
                 fill
-                className="object-cover object-top"
+                className="object-cover"
+                style={{
+                  objectPosition: m.fotoPosition,
+                  transform: `scale(${m.zoom})`,
+                  transformOrigin: m.fotoPosition,
+                }}
               />
             </div>
 
@@ -130,11 +139,30 @@ export default function Couple() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-1.5 mx-auto mb-5 hover:opacity-70 transition-opacity"
                 style={{
-                  fontSize: "12px",
-                  color: "#aaa", // Warna soft biar ga nabrak sama nama
-                  fontFamily: "'Jost', sans-serif",
-                  letterSpacing: "0.05em",
-                  textDecoration: "none",
+                  display: "inline-flex",
+      alignItems: "center",
+      gap: "6px",
+      padding: "8px 20px",
+      borderRadius: "999px",
+      border: "1px solid rgba(0, 0, 0, 0.33)",
+      background: "transparent",
+      color: "#aaa",
+      fontSize: "11px",
+      letterSpacing: "0.15em",
+      fontFamily: "'Jost', sans-serif",
+      textDecoration: "none",
+      marginBottom: "20px",
+      transition: "all 0.3s ease",
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = "#2d2d2d";
+                  e.currentTarget.style.color = "#fff";
+                  e.currentTarget.style.borderColor = "#2d2d2d";
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#aaa";
+                  e.currentTarget.style.borderColor = "rgba(0,0,0,0.15)";
                 }}
               >
                 {/* Icon IG SVG Simple */}
@@ -153,7 +181,7 @@ export default function Couple() {
               lineHeight: 1.5,
               fontFamily: "'Playfair Display', serif",
             }}>
-              {`${m.gender.charAt(0).toUpperCase() + m.gender.slice(1)} ${m.anakKe} Dari : `}
+              {`${m.gender.charAt(0).toUpperCase() + m.gender.slice(1)} ${m.anakKe} dari : `}
               <br/>
               {m.ayah}
               {" "}&amp;{" "}

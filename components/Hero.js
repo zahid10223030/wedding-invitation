@@ -485,11 +485,12 @@ export default function Hero({ onOpen, guestName = "Di Tempat" }) {
 
           {/* FRAME TAMU DEKORATIF */}
           <motion.div {...stagger(4)} className="w-full mb-6">
-          <div className="backdrop-blur-sm bg-white/1 border border-white/2 rounded-xl overflow-hidden p-1">
+          <div className="bg-white/1 border border-white/2 rounded-xl overflow-hidden p-1">
             <FrameTamu>
               <p
                 style={{
                   fontSize: "9px",
+                  // fontWeight: 700,
                   letterSpacing: "0.32em",
                   textTransform: "uppercase",
                   color: "#aaa",
