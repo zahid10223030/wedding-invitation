@@ -29,8 +29,8 @@ function saveToCalendar() {
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
     "BEGIN:VEVENT",
-    "DTSTART:20260615T090000Z",
-    "DTEND:20260615T170000Z",
+    "DTSTART:20260613T090000Z",
+    "DTEND:20260613T170000Z",
     "SUMMARY:Pernikahan Agnia & Wahid",
     "DESCRIPTION:Akad Nikah & Resepsi Pernikahan Agnia Amalia dan Wahid Hasyim",
     "LOCATION:Pondok Pesantren Al Amin Bongkor, Kp. Bongkor, Desa Cintarakyat, Kec. Samarang, Kabupaten Garut, Jawa Barat",
@@ -42,13 +42,13 @@ function saveToCalendar() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "pernikahan-agnia-wahid.ics";
+  a.download = "pernikahan-wahid-agnia.ics";
   a.click();
   URL.revokeObjectURL(url);
 }
 
 export default function Details() {
-  const { days, hours, minutes, seconds } = useCountdown("2026-06-15T09:00:00");
+  const { days, hours, minutes, seconds } = useCountdown("2026-06-13T09:00:00");
 
   return (
     <section className="py-24 px-6 text-center" style={{ backgroundColor: "#fff" }}>
@@ -127,12 +127,12 @@ export default function Details() {
               09:00 – 10:30 WIB
             </p>
             <p style={{
-              fontSize: "13px",
+              fontSize: "15px",
               color: "#aaa",
               lineHeight: 1.8,
-              fontFamily: "'Jost', sans-serif",
+              fontFamily: "'Playfair Display', serif",
             }}>
-              Selasa, 15 Juni 2026
+              Selasa, 13 Juni 2026
             </p>
           </div>
 
@@ -169,7 +169,7 @@ export default function Details() {
               fontSize: "13px",
               color: "#aaa",
               lineHeight: 1.8,
-              fontFamily: "'Jost', sans-serif",
+              fontFamily: "'Playfair Display', serif",
             }}>
               Pondok Pesantren Al Amin Bongkor<br />
               Kp. Bongkor, Desa Cintarakyat,<br />
