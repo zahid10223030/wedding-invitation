@@ -10,7 +10,8 @@ const phases = [
     tanggal: "2024",
     cerita:
       "Semua bermula pada tahun 2024, di sebuah pesantren tempat kami belajar ilmu, menundukkan ego, serta menata hati. Di tempat itulah takdir diam-diam mempertemukan kami. Saat itu, kami hanyalah seorang santri dan santriwati yang saling mengenal seperlunya—tanpa janji, tanpa rasa yang berani diungkapkan. Hanya tatapan singkat yang segera dialihkan, dan sapaan sederhana yang lalu tenggelam di antara hiruk pikuk perjuangan menuntut ilmu.",
-    foto: "/assets/AwalPertemuan.jpeg",
+    foto: "/assets/prewed3.jpeg",
+    fotoPosition: "center 70%",
   },
   {
     fase: "02",
@@ -19,6 +20,7 @@ const phases = [
     cerita:
       "Hari demi hari berlalu, hingga tanpa kami sadari, komunikasi yang sederhana itu mulai tumbuh menjadi perhatian yang tak lagi biasa, pada tahun 2025, kami melangkah lebih serius. Bukan sekedar hubungan biasa, tetapi sebuah komitmen yang kami jaga dengan do'a, kesabaran dan keyakinan, bahwa niat baik akan Allah mudahkan jalannya.",
     foto: "/assets/AwalHubungan.jpeg",
+    fotoPosition: "center center",
   },
   {
     fase: "03",
@@ -27,6 +29,7 @@ const phases = [
     cerita:
       "Tahun 2026 menjadi saksi dari keberanian yang lahir setelah panjangnya penantian dan doa-doa yang tak pernah lelah dipanjatkan. Dengan penuh keyakinan, dia datang membawa kesungguhan, mempertemukan dua keluarga besar dalam satu ruang yang dipenuhi harap dan restu. Hari itu bukan sekadar tentang dua insan yang saling mencintai, melainkan tentang dua hati yang dipersatukan oleh takdir, dua keluarga yang saling menerima, serta dua doa yang sejak lama diam-diam mengetuk langit hingga akhirnya Allah mempertemukan kita dalam satu tujuan yang sama.",
     foto: "/assets/Pertunangan.jpeg",
+    fotoPosition: "center center",
   },
   {
     fase: "04",
@@ -35,6 +38,7 @@ const phases = [
     cerita:
       "Kini, dengan penuh rasa syukur, kami merencanakan hari suci pada 13 Juni 2026. Sebuah langkah besar untuk menyempurnakan agama dan membangun bahtera rumah tangga dalam ridla-Nya. Semoga perjalanan yang berawal dari pesantren ini menjadi kisah cinta yang tak hanya indah di dunia, tetapi juga kekal hingga surga.",
     foto: "/assets/Pernikahan.jpeg",
+    fotoPosition: "center center",
   },
 ];
 
@@ -85,6 +89,7 @@ function PhaseCard({ item, index }) {
           alt={item.judul}
           fill
           className="object-cover object-center"
+          style={{ objectPosition: item.fotoPosition || "center center" }}
         />
       </div>
 
