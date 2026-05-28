@@ -100,7 +100,7 @@ function PhaseCard({ item, index }) {
           fontSize: "clamp(1.8rem, 5vw, 2.5rem)",
           fontWeight: 600,
           color: "#2d2d2d",
-          marginBottom: "16px",
+          marginBottom: "10px",
           lineHeight: 1.2,
           textTransform: "uppercase",
           letterSpacing: "0.05em",
@@ -111,7 +111,7 @@ function PhaseCard({ item, index }) {
 
       {/* Garis Pembatas Kecil */}
       <div
-        className="w-12 h-px mb-6"
+        className="w-12 h-px mb-3"
         style={{ backgroundColor: "rgba(230,81,0,0.4)" }}
       />
 
@@ -121,7 +121,7 @@ function PhaseCard({ item, index }) {
           fontSize: "18px",
           color: "#1F1F1F",
           fontFamily: "'Playfair Display', serif",
-          lineHeight: 2,
+          lineHeight: 1.6,
           textAlign: "center",
           padding: "0 10px",
         }}
