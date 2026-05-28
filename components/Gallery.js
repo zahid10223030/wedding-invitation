@@ -7,11 +7,11 @@ import Image from "next/image";
 const photos = [
   { src: "/assets/prewed1.jpeg", tall: true },
   { src: "/assets/prewed16.jpeg", tall: false },
-  { src: "/assets/prewed15.jpeg", tall: false },
+  { src: "/assets/prewed19.jpeg", tall: false },
   { src: "/assets/prewed4.jpeg", tall: true },
   { src: "/assets/prewed17.jpeg", tall: false },
   { src: "/assets/prewed18.jpeg", tall: true },
-  { src: "/assets/prewed19.jpeg", tall: true },
+  { src: "/assets/prewed15.jpeg", tall: true },
   { src: "/assets/prewed12.jpeg", tall: false },
 ];
 
