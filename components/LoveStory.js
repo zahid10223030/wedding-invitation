@@ -98,7 +98,7 @@ function PhaseCard({ item, index }) {
         style={{
           fontFamily: "'Cormorant Garamond', serif",
           fontSize: "clamp(1.8rem, 5vw, 2.5rem)",
-          fontWeight: 600,
+          fontWeight: 500,
           color: "#2d2d2d",
           marginBottom: "10px",
           lineHeight: 1.2,
