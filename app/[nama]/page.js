@@ -38,7 +38,7 @@ export default function UndanganDinamic() {
   return (
     <main className="bg-white min-h-screen">
       {/* Audio File */}
-      <audio ref={audioRef} src="/RiskItAll.mp3" loop />
+      <audio ref={audioRef} src="/PerahuKertas.mp3" loop />
       
       {!isOpen ? (
         // 3. Oper namaTamu ke props guestName di Hero
