@@ -14,7 +14,7 @@ const mempelai = [
     fotoPosition: "center top",
     anakKe: "ke-empat",
     ayah: "Bapak Usep Jumhur, S.I.P",
-    ibu: "Ibu Iis Nursaadah",
+    ibu: "Ibu Iis Nursaadah, S.Pd",
   },
   {
     foto: "/assets/prewed10.jpeg",       
